@@ -110,10 +110,10 @@ function Person(name, age) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. the value of 'this' when inside a global scope function is the window object
+    2. the value of 'this' when inside a function called by a preceding dot is the object before the dot
+    3. the value of 'this when inside a used constructor function is the object created and returned by the function
+    4. the value of 'this' when used in call or apply is explicitly defined
   */
   
   
