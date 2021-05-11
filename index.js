@@ -86,7 +86,14 @@ function Person(name, age) {
     this.tank += gallons;
   };
   Car.prototype.drive = function(distance) {
-
+    if (this.tank < distance/this.milesPerGallon) {
+      this.odometer += this.tank*this.milesPerGallon;
+      this.tank = 0;
+      return `I ran out of fuel at ${this.odometer}`;
+    } else {
+      this.tank -= distance/this.milesPerGallon;
+      this.odometer += distance;
+    }
   }
   
 
